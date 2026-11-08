@@ -4,7 +4,7 @@ SolidCraft designs (`.sc`, the editable source), STEP exports and 3MF meshes. Al
 in their assembly position: optical axis = Z, telescope side +Z, bearing seat from z = 0 to 5. The
 assembly links every part with `component.insert_design`, so it needs no mates.
 
-`_ref/top_assy_rotator.step` is the original model this release-1 rebuild was measured from (moved
+`original/top_assy_rotator.step` is the original model this release-1 rebuild was measured from (moved
 here from Triton). The Solid Edge `Rotator` folder is only a placeholder and was not used.
 
 ## Own parts

@@ -29,5 +29,5 @@ Details, parameters and checks: [`cad/README.md`](cad/README.md). Bill of materi
 ## Status
 
 - 2026-11-08: repository created; parametric SolidCraft rebuild of the original STEP
-  (`cad/_ref/top_assy_rotator.step`) with all parts and the bought parts linked into
+  (`cad/original/top_assy_rotator.step`) with all parts and the bought parts linked into
   `cad/openroto_assembly.sc`. Not built yet.
