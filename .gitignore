@@ -1,0 +1,25 @@
+# PlatformIO
+.pio/
+
+# KiCad local state, backups, locks
+*.kicad_prl
+**/*-backups/
+**/.history/
+*.lck
+fp-info-cache
+
+# Solid Edge temporary/backup files
+*.bak
+~$*
+
+# .NET (ASCOM drivers)
+bin/
+obj/
+*.user
+
+# Claude Code agent worktrees
+.claude/worktrees/
+
+# Agent files stay local (CLAUDE.md, .claude/) - never in the public repo
+/CLAUDE.md
+/.claude/
