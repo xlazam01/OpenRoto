@@ -32,7 +32,7 @@ Deviations from the original STEP, all small:
 | Design | Part | Source of the dimensions |
 |---|---|---|
 | `openroto_bearing_rau5005` | THK RAU5005 crossed roller ring, 50 × 61 × 5, 0.2 chamfers (envelope) | the original STEP |
-| `openroto_screw_iso14581_m2.5x8` | ISO 14581 M2.5×8 TX8, A2 (×6) | dk 4.7, k 1.5: ISO 14581 / ISO 7046-2 values from fastener listings (Schaefer-Peters, Westfield Fasteners) |
+| `openroto_screw_din7991_m2.5x8` | DIN 7991 M2.5×8 hex socket countersunk, A2 (×6), head 0.25 below the clamp face | dk 4.8, 90° head, hex socket s1.5 × 0.8 deep: fastener listings for DIN 7991 M2.5 (bolts.co.uk, Spalding Fasteners); the standard text was not checked |
 | `openroto_pulley_gt2_12t` | GT2 12T pulley, 5 mm bore, 6 mm belt (envelope: Ø11 flanges, Ø10 × 6 hub toward the motor) | **typical, not from a datasheet** — measure the bought pulley and correct `flange_d`, `hub_d`, `hub_l` |
 | `openroto_belt_gt2_360` | GT2 closed belt 360 mm, 6 mm wide (smooth band from the pulley tips to the backing, 0.63 thick) | GT2 pitch geometry |
 
