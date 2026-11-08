@@ -11,9 +11,9 @@ here from Triton). The Solid Edge `Rotator` folder is only a placeholder and was
 
 | Design | Make | Notes |
 |---|---|---|
-| `openroto_inner_ring` | milled Al | rotating side: Ø45 bore with 1.5 × 45° lead-in under a Ø48 counterbore, Ø50 bearing seat, Ø52 × 0.8 flange over the bearing, male M48×0.75 (Ø47.908, 2.7 long) with a Ø47.2 undercut |
-| `openroto_spacer_ring` | milled Al | Ø50.05 / Ø55 × 1.5 under the bearing inner ring, Ø52 × 0.5 lip; turns with the inner ring |
-| `openroto_clamp_ring` | milled Al | fixed side: Ø78 × 3.55, female M48×0.75 (minor Ø47.284), Ø57 recess over the inner-ring flange, Ø70 × 1.5 spigot into the sleeve, 6 × Ø2.7 countersunk 90° to Ø5.3 on Ø65 |
+| `openroto_inner_ring` | milled Al, black matte anodised | rotating side: Ø45 bore with 1.5 × 45° lead-in under a Ø48 counterbore, Ø50 bearing seat, Ø52 × 0.8 flange over the bearing, male M48×0.75 (Ø47.908, 2.7 long) with a Ø47.2 undercut |
+| `openroto_spacer_ring` | milled Al, black matte anodised | Ø50.05 / Ø55 × 1.5 under the bearing inner ring, Ø52 × 0.5 lip; turns with the inner ring |
+| `openroto_clamp_ring` | milled Al, black matte anodised | fixed side: Ø78 × 3.55, female M48×0.75 (minor Ø47.284), Ø57 recess over the inner-ring flange, Ø70 × 1.5 spigot into the sleeve, 6 × Ø2.7 countersunk 90° to Ø5.3 on Ø65 |
 | `openroto_gt2_sleeve` | printed | bearing housing Ø61, 120T GT2 ring (tip Ø75.886 = 120·2/π − 2·0.254), Ø77.886 × 1 belt flange, 6 × Ø2.0755 pilot holes 4.8 deep on Ø65 for the M2.5 screws |
 | `openroto_assembly` | — | all parts, 6 screws, pulley at (0, 108.507) and the belt |
 

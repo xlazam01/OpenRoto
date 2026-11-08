@@ -18,7 +18,7 @@ channel **R** (88.889 steps/° at 16 µsteps, IMU homing).
 | Bearing | THK RAU5005 crossed roller ring, 50 × 61 × 5 mm |
 | Drive | 120T GT2 sleeve, 12T pulley, 360 mm closed GT2 belt (6 mm), 10:1; centre distance 108.51 mm |
 | Motor | 17HS08-1004S (mount on the OpenWheel motor box in Triton) |
-| Materials | milled aluminium rings; printed GT2 sleeve (PETG) |
+| Materials | milled aluminium rings, black matte anodised; printed GT2 sleeve (PETG) |
 
 ## Parts
 
