@@ -50,25 +50,27 @@ dof 0). Main ones: inner ring `bore_d`, `bear_bore`, `bear_w`, `thr_d`, `thr_len
 
 Limits:
 - The sleeve's 240 groove-lip fillets (`GrooveLipFillets`, R0.15) are picked at fixed points for
-  120 teeth: changing `teeth` needs that feature redone. It also takes about **40 min to rebuild**
-  in SolidCraft 0.29, so a change to any sleeve parameter used before it (`teeth`, `groove_*`,
-  `sl_od`, `fl_*`, `core_h`) costs that. The pilot holes and the inner chamfer come after it and
-  rebuild in seconds. Opening the file is instant (saved model).
+  120 teeth: changing `teeth` needs that feature redone. A full sleeve rebuild took about 40 min
+  in SolidCraft 0.29 and 2.4 min after the 2026-11-08 update (the fillets ~77 s, the pilot holes
+  ~110 s). Opening the file is instant (saved model).
 
-## Checks (2026-11-08)
+## Checks (2026-11-08, re-checked 2026-11-09)
 
 | Design | Volume mm³ (original STEP) | Feature warnings | Mesh (`meshcheck`) | Print (`printcheck --up=+z`) |
 |---|---|---|---|---|
-| inner ring | 2978.6 (2977.4) | none | 0 open edges | — (milled) |
+| inner ring | 2977.7 (2977.4) | none | 0 open edges | — (milled) |
 | spacer ring | 482.4 (482.4) | none | 0 open edges | — (milled) |
-| clamp ring | 8220.2 (8221.0) | none | 0 open edges | — (milled) |
-| GT2 sleeve | 10365.5 (10340.4) | none | 0 open edges | no supports, no thin walls, bed contact 2128 mm² (flange down) |
-| bearing | 4781.4 (4780.5) | none | — | — |
+| clamp ring | 8220.3 (8221.0) | none | 0 open edges | — (milled) |
+| GT2 sleeve | 10365.2 (10340.4) | none | 0 open edges | no supports, no thin walls, bed contact 2127 mm² (flange down) |
+| bearing | 4780.9 (4780.5) | none | — | — |
 
-All designs opened from their saved model (`solidcraft-cli bench-open`: `adopted: true, recomputed: 0`).
-After the SolidCraft update of 2026-11-08 evening, the designs saved before it recompute on open
-(`saved_model: false`); re-saved since: clamp ring, belt and assembly (2026-11-09). The update also lost
-the clamp's `HoleChamfers` picks: reselected at +Y of each hole, volume unchanged (8220.3), 0 open edges.
+All designs open from their saved model (`solidcraft-cli bench-open`: `adopted: true, recomputed: 0`).
+A SolidCraft update (2026-11-08 evening) stopped loading the saved models of older files, so every
+design was re-saved on 2026-11-09 (`bench-open <file> --save <out>` recomputes and saves, but saves no
+model when a feature fails, so check its output). The update also lost two chamfer picks, both
+reselected with the volume unchanged and 0 open edges: the clamp's `HoleChamfers` (at +Y of each hole,
+8220.3) and the sleeve's `ToothRingInnerChamfer` (at 45° on the Ø70 top edge, 10365.2; print check
+unchanged). The assembly links all designs with no feature warnings.
 The clamp follows `hole_pcd` and `cl_od` without errors (`check_parameters`).
 
 Kernel notes from the build: a revolved hole cutter and a 120-cylinder groove cut both logged
