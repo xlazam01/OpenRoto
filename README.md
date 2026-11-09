@@ -2,7 +2,7 @@
 
 **A flat, belt-driven camera rotator for M48 imaging trains.** A THK RAU5005 crossed roller ring
 carries the camera side; a printed 120-tooth GT2 sleeve on the telescope side is driven by a 12T
-pulley and a closed 360 mm belt, so 10:1. About 10.4 mm of optical length, Ø45 clear aperture.
+pulley and a closed 340 mm belt, so 10:1. About 10.4 mm of optical length, Ø45 clear aperture.
 
 OpenRoto is the rotator of [Triton](../Triton/), the Esprit 100ED imaging train, and belongs to the
 OpenWheel family. It has no electronics of its own: in Triton the motor runs on
@@ -19,7 +19,7 @@ OpenWheel family. It has no electronics of its own: in Triton the motor runs on
 | Clear aperture | Ø45 mm |
 | Outside diameter | Ø78 mm (clamp ring); belt flange Ø77.9 mm |
 | Bearing | THK RAU5005 crossed roller ring, 50 × 61 × 5 mm |
-| Drive | 120T GT2 sleeve, 12T pulley, closed GT2 belt 360 mm × 6 mm, 10:1; centre distance 108.51 mm |
+| Drive | 120T GT2 sleeve, 12T pulley, closed GT2 belt 340 mm × 6 mm, 10:1; centre distance 97.90 mm |
 | Motor | 17HS08-1004S (NEMA 17 pancake), 16 µsteps → 88.889 steps/° |
 | Homing | none on the rotator itself; Triton homes it with the AstroUniBoard IMU (gravity) |
 | Materials | milled 6061-T6 rings, bead blasted and black matte anodised; printed PETG sleeve |

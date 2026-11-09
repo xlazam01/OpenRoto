@@ -15,7 +15,7 @@ here from Triton). The Solid Edge `Rotator` folder is only a placeholder and was
 | `openroto_spacer_ring` | milled Al, black matte anodised | Ø50.05 / Ø55 × 1.5 under the bearing inner ring, Ø52 × 0.5 lip; turns with the inner ring |
 | `openroto_clamp_ring` | milled Al, black matte anodised | fixed side: Ø78 × 3.55, female M48×0.75 (minor Ø47.284), Ø57 recess over the inner-ring flange, Ø70 × 1.5 spigot into the sleeve, 6 × Ø2.7 countersunk 90° to Ø5.3 on Ø65 |
 | `openroto_gt2_sleeve` | printed | bearing housing Ø61, 120T GT2 ring (tip Ø75.886 = 120·2/π − 2·0.254), Ø77.886 × 1 belt flange, 6 × Ø2.0755 pilot holes 4.8 deep on Ø65 for the M2.5 screws |
-| `openroto_assembly` | — | all parts, 6 screws, pulley at (0, 108.507) and the belt |
+| `openroto_assembly` | — | all parts, 6 screws, pulley at (0, 97.900) and the belt |
 
 Threads are plain cylinders at the thread diameters of the original (cosmetic), as in the STEP.
 
@@ -34,10 +34,11 @@ Deviations from the original STEP, all small:
 | `openroto_bearing_rau5005` | THK RAU5005 crossed roller ring, 50 × 61 × 5, 0.2 chamfers (envelope) | the original STEP |
 | `openroto_screw_din7991_m2.5x8` | DIN 7991 M2.5×8 hex socket countersunk, A2 (×6), head 0.25 below the clamp face | dk 4.8, 90° head, hex socket s1.5 × 0.8 deep: fastener listings for DIN 7991 M2.5 (bolts.co.uk, Spalding Fasteners); the standard text was not checked |
 | `openroto_pulley_gt2_12t` | GT2 12T pulley, 5 mm bore, 6 mm belt (envelope: Ø11 flanges, Ø10 × 6 hub toward the motor) | **typical, not from a datasheet** — measure the bought pulley and correct `flange_d`, `hub_d`, `hub_l` |
-| `openroto_belt_gt2_360` | GT2 closed belt 360 mm, 6 mm wide (smooth band from the pulley tips to the backing, 0.63 thick) | GT2 pitch geometry |
+| `openroto_belt_gt2_340` | GT2 closed belt 340 mm, 6 mm wide (smooth band from the pulley tips to the backing, 0.63 thick) | GT2 pitch geometry |
 
-Centre distance for the 360 mm belt on 120T/12T, solved exactly: **108.507 mm** (pitch radii
-38.197 / 3.820 mm, wrap 216.9° / 143.1°). Triton's notes give ≈108.6 mm from the approximate formula.
+Centre distance for the 340 mm belt on 120T/12T, solved exactly: **97.900 mm** (pitch radii
+38.197 / 3.820 mm, wrap 221.1° / 138.9°). The motor mount (OpenWheel Triton variant, slotted plate) sets
+the centre distance between 93.8 and 98.7 mm, so the belt is tensioned by sliding the motor.
 The pulley sits on +Y in the assembly; its real direction comes from the OpenWheel motor mount (Triton #6).
 
 ## Parameters
@@ -64,7 +65,10 @@ Limits:
 | GT2 sleeve | 10365.5 (10340.4) | none | 0 open edges | no supports, no thin walls, bed contact 2128 mm² (flange down) |
 | bearing | 4781.4 (4780.5) | none | — | — |
 
-All designs open from their saved model (`solidcraft-cli bench-open`: `adopted: true, recomputed: 0`).
+All designs opened from their saved model (`solidcraft-cli bench-open`: `adopted: true, recomputed: 0`).
+After the SolidCraft update of 2026-11-08 evening, the designs saved before it recompute on open
+(`saved_model: false`); re-saved since: clamp ring, belt and assembly (2026-11-09). The update also lost
+the clamp's `HoleChamfers` picks: reselected at +Y of each hole, volume unchanged (8220.3), 0 open edges.
 The clamp follows `hole_pcd` and `cl_od` without errors (`check_parameters`).
 
 Kernel notes from the build: a revolved hole cutter and a 120-cylinder groove cut both logged
