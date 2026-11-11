@@ -23,3 +23,6 @@ obj/
 # Agent files stay local (CLAUDE.md, .claude/) - never in the public repo
 /CLAUDE.md
 /.claude/
+
+# SolidCraft open-file locks
+.~*.lock
