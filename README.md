@@ -61,7 +61,7 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
 
 - **Fixed side** (telescope): the clamp ring screws onto the flattener. Six M2.5 countersunk screws
   pull it onto the milled outer ring and clamp the bearing's outer ring between them. A thin printed
-  GT2 sleeve is pressed over the outer ring's rim.
+  GT2 sleeve is pressed over the outer ring's rim and sits on its belt flange.
 - **Rotating side** (camera): the bearing's inner ring sits on the inner ring's Ø50 seat under its
   Ø52 flange. The spacer ring below it is clamped by the next part of the train when that is screwed
   onto the inner ring's M48 thread.
@@ -72,8 +72,8 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
 
 | What | Where | Documents |
 |---|---|---|
-| Inner, spacer, clamp and outer ring | CNC, e.g. JLCCNC: 6061-T6, bead blast + black anodise | [`docs/cnc/`](docs/cnc/) — order guide, STEP + PDF drawing per part (outer ring: not yet, see status) |
-| GT2 sleeve | 3D print, PETG, flange down, no supports | print notes in [`docs/PARTS.md`](docs/PARTS.md) |
+| Inner, spacer, clamp and outer ring | CNC, e.g. JLCCNC: 6061-T6, bead blast + black anodise | [`docs/cnc/`](docs/cnc/) — order guide, STEP + PDF drawing per part |
+| GT2 sleeve | 3D print, PETG, no supports | [`cad/openroto_gt2_sleeve.3mf`](cad/openroto_gt2_sleeve.3mf), print notes in [`docs/PARTS.md`](docs/PARTS.md) |
 | Bearing, screws, pulley, belt, motor | buy | [`docs/BOM.md`](docs/BOM.md) |
 
 ## Assembly
@@ -108,10 +108,9 @@ The `.sc` files open in SolidCraft; everyone else uses the STEP exports.
   [`cad/original/`](cad/original/)) in SolidCraft, parts checked (no feature warnings, closed meshes).
 - Built once for Triton. The rings came from JLCCNC; the outer ring's bearing pocket was sanded
   for a snug fit.
-- **Open:** the CAD draws the milled outer ring and the printed GT2 sleeve as one body
-  (`openroto_gt2_sleeve`). Until it is split into two designs there is no STEP/drawing for the outer
-  ring and no print file for the thin sleeve. The 12T pulley model is a typical envelope until the real
-  part is measured.
+- 2026-11-13: outer ring (milled, with the belt flange and six tapped M2.5 holes) and GT2 sleeve
+  (printed, 0.2 mm press fit on the rim) split into two designs as in the original; outer-ring drawing added.
+- **Open:** the 12T pulley model is a typical envelope until the real part is measured.
 
 ## License
 

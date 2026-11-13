@@ -5,9 +5,6 @@ How to put one OpenRoto together. Item numbers match the [BOM](BOM.md) and the e
 
 ![OpenRoto exploded view](openroto_exploded.png)
 
-> The CAD draws the outer ring (4a, milled) and the GT2 sleeve (4b, printed) as one body. In the real
-> rotator they are two parts: the printed sleeve is pressed over the outer ring's rim.
-
 ## Tools and supplies
 
 - Hex key 1.5 mm (screws 6; usually also the grub screws of the pulley 7)
@@ -30,14 +27,16 @@ How to put one OpenRoto together. Item numbers match the [BOM](BOM.md) and the e
 
 ## Steps
 
-1. **GT2 sleeve onto the outer ring.** Press the printed sleeve 4b over the outer ring's rim, belt
-   flange towards the outer ring's flange side, until it seats all round. It is held by friction.
+1. **GT2 sleeve onto the outer ring.** Press the printed sleeve 4b over the outer ring 4a's Ø70 rim
+   (0.2 mm press fit) until it sits on the belt flange all round. Press evenly, e.g. with a flat board
+   on a table; it is held by friction.
 2. **Bearing onto the inner ring.** Slide the bearing 5 onto the inner ring 1's Ø50 seat from the
    thread side until it touches the Ø52 flange. Push on the bearing's inner ring only.
 3. **Spacer.** Slide the spacer ring 2 onto the seat behind the bearing, lip towards the bearing.
 4. **Into the outer ring.** Lower the inner ring with the bearing into the outer ring 4a, so the
    bearing's outer ring sits in the Ø61 pocket. Push on the bearing's outer ring only.
-5. **Clamp ring.** Put the clamp ring 3 on top, spigot into the outer ring, countersinks up. Line up
+5. **Clamp ring.** Put the clamp ring 3 on top, spigot into the top of the GT2 sleeve (a light press
+   as well), countersinks up. Line up
    the six holes with the tapped holes.
 6. **Screws.** Turn in all six screws 6 by hand first. Then tighten them in a star pattern
    (1-4-2-5-3-6) in two rounds: first just touching, then **snug, about 0.3–0.5 N·m** — firm with the
@@ -66,5 +65,5 @@ How to put one OpenRoto together. Item numbers match the [BOM](BOM.md) and the e
   movement may be felt. If there is, the next part is not screwed down onto the spacer (step 8) or the
   bearing pocket was sanded too far.
 - **Belt tracks:** run a full turn with the motor (32 000 steps at 16 µsteps; 88.889 steps/°). The
-  belt stays on the sleeve's flange, does not climb the pulley flanges and does not skip.
+  belt stays on the outer ring's belt flange, does not climb the pulley flanges and does not skip.
 - **Back to the start:** after +360° and −360° the rotator returns to its mark (no lost steps).
