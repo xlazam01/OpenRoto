@@ -15,10 +15,10 @@ ISO 2768-m. ([CNC Machining Order Guidelines](https://jlccnc.com/help/article/cn
 | Inner ring | [`cad/openroto_inner_ring.step`](../../cad/openroto_inner_ring.step) | [`openroto_inner_ring.pdf`](openroto_inner_ring.pdf) | 1 × M48×0.75-6g external |
 | Spacer ring | [`cad/openroto_spacer_ring.step`](../../cad/openroto_spacer_ring.step) | [`openroto_spacer_ring.pdf`](openroto_spacer_ring.pdf) | none |
 | Clamp ring | [`cad/openroto_clamp_ring.step`](../../cad/openroto_clamp_ring.step) | [`openroto_clamp_ring.pdf`](openroto_clamp_ring.pdf) | 1 × M48×0.75-6H internal |
-| Outer ring | [`cad/openroto_outer_ring.step`](../../cad/openroto_outer_ring.step) | [`openroto_outer_ring.pdf`](openroto_outer_ring.pdf) | 6 × M2.5-6H, 4.5 deep min |
+| Outer ring | [`cad/openroto_outer_ring.step`](../../cad/openroto_outer_ring.step) | [`openroto_outer_ring.pdf`](openroto_outer_ring.pdf) | 6 × M2.5-6H through |
 
 The STEP files are exported from the SolidCraft designs and are the release-1 geometry. The M48
-threads are modelled as plain cylinders (thread diameters), the M2.5 holes as the Ø2.1 tap drill;
+threads are modelled as plain cylinders (thread diameters), the M2.5 holes as the Ø2.1 tap drill (through);
 the drawing calls them out.
 
 ## Settings on the quote page (same for all four)
@@ -42,7 +42,7 @@ Remark to paste into the order (per part, threads on inner, clamp and outer ring
 
 Outer ring:
 
-> 6x M2.5-6H tapped holes, 4.5 mm full thread minimum, as shown on the PDF. Sizes, fits and threads
+> 6x M2.5-6H tapped THROUGH (full thread over the whole 5.8 mm), as shown on the PDF; deburr the exits. Sizes, fits and threads
 > apply after anodising (bead blast + black anodise, matte). The Ø61 H7 bearing pocket must take a
 > 61 mm bearing outer ring by hand: please do not make it tight.
 
@@ -60,7 +60,7 @@ Outer ring:
 | Clamp ring | 6 × countersinks | Ø2.7 / 90° to Ø5.3 on PCD 65 | DIN 7991 M2.5 heads sit 0.25 below the face |
 | Outer ring | bearing pocket | Ø61 H7 (61.000–61.030), 4.8 ±0.03 deep | the RAU5005 goes in by hand, snugly; sand evenly if tight |
 | Outer ring | rim | Ø70 0/−0.05 | the printed sleeve presses on |
-| Outer ring | 6 × M2.5 | 6H, 4.5 deep min, PCD 65 | a DIN 7991 M2.5×8 screws in by hand through the clamp ring |
+| Outer ring | 6 × M2.5 | 6H through, PCD 65 | a DIN 7991 M2.5×8 screws in by hand through the clamp ring |
 
 ## Open before ordering
 

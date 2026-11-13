@@ -84,8 +84,8 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
 Short version — the full guide with the part checks, tools, torque and the access rules is
 [`docs/ASSEMBLY.md`](docs/ASSEMBLY.md).
 
-1. Check the parts: bearing fits (sand the outer ring's Ø61 pocket if needed), sleeve height ≤ 6.5 mm,
-   screw length (M2.5×6 if an ×8 bottoms in the tapped hole), flattener thread ≤ 2.7 mm into the clamp ring.
+1. Check the parts: bearing fits (sand the outer ring's Ø61 pocket if needed), sleeve height ≤ 6.4 mm
+   (drawn 6.3), the M2.5 screws run in by hand, flattener thread ≤ 2.7 mm into the clamp ring.
 2. Press the printed GT2 sleeve fully onto the outer ring's rim and flange.
 3. Bearing into the outer ring's pocket (press its outer race with the clamp ring), inner ring into the
    bearing from the top, spacer ring onto the seat from below (raised lip towards the bearing).
@@ -116,6 +116,9 @@ The `.sc` files open in SolidCraft; everyone else uses the STEP exports.
   for a snug fit.
 - 2026-11-13: outer ring (milled, with the belt flange and six tapped M2.5 holes) and GT2 sleeve
   (printed, 0.2 mm press fit on the rim) split into two designs as in the original; outer-ring drawing added.
+- 2026-11-13: assembly review fixes: GT2 sleeve 6.3 high (0.2 mm gap under the clamp plate, so the
+  clamp ring rests on the bearing only), outer ring's M2.5 holes tapped through (drawing rev B) so the
+  M2.5×8 screws have full thread.
 - **Open:** the 12T pulley model is a typical envelope until the real part is measured.
 
 ## License

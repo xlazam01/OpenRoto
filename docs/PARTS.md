@@ -42,7 +42,7 @@ GT2 sleeve above the outer ring's rim, and six Ø2.7 holes countersunk 90° on a
 
 **4a — Outer ring (milled).** The bearing housing: a Ø61 pocket 4.8 deep for the bearing's outer ring
 (its top face stays 0.2 below the bearing, so the clamp ring presses on the bearing), a Ø57 lip under
-it, six M2.5 tapped holes on a Ø65 circle for the clamp-ring screws, the Ø70 rim the GT2 sleeve is
+it, six M2.5 holes tapped through on a Ø65 circle for the clamp-ring screws, the Ø70 rim the GT2 sleeve is
 pressed onto, and the Ø77.9 × 1 belt flange the sleeve sits on.
 
 - Material: aluminium 6061-T6, bead blasted and black matte anodised. ~18 g.
@@ -52,7 +52,8 @@ pressed onto, and the Ø77.9 × 1 belt flange the sleeve sits on.
   came out too tight and was sanded until the RAU5005 sat in it snugly; the inner ring's Ø50 seat was
   fine as delivered. Expect to fit the pocket by hand, or order it from a shop that holds the tolerance.
 
-**4b — GT2 sleeve (printed).** A thin printed ring carrying the 120 GT2 teeth (tip Ø75.9, 6.5 high).
+**4b — GT2 sleeve (printed).** A thin printed ring carrying the 120 GT2 teeth (tip Ø75.9, 6.3 high:
+0.2 mm below the clamp plate, so the clamp ring rests on the bearing only).
 Its Ø69.8 bore is pressed over the outer ring's Ø70 rim and held by friction; the clamp ring's spigot
 goes into its top.
 
