@@ -43,8 +43,8 @@ items = [
     ("5", "Bearing THK RAU5005", (982, 550), 285),
     ("2", "Spacer ring (milled Al)", (966, 615), 360),
     ("4b", "GT2 sleeve (printed PETG)", (1021, 690), 435),
-    ("4a", "Outer ring (milled Al)", (1023, 785), 510),
-    ("8", "GT2 belt 340 mm", (760, 757), 585),
+    ("8", "GT2 belt 340 mm", (760, 757), 510),
+    ("4a", "Outer ring (milled Al)", (1023, 785), 585),
     ("7", "GT2 pulley 12T (on motor)", (455, 830), 660),
 ]
 lx = im.width + 40
