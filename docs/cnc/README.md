@@ -53,9 +53,12 @@ Remark to paste into the order (per part, threads only on inner and clamp ring):
 
 ## Open before ordering
 
-- **Ø50 seat fit:** h6 is chosen for a sliding fit of the RAU5005 inner ring. THK lists the fits in
-  catalog 382E ("Fit"), which was not checked. Confirm it there (or with THK) and change the drawing
-  note if the catalog asks for something else.
+- **Outer ring missing:** the fourth milled part, the outer ring (bearing pocket, tapped M2.5 holes,
+  rim for the printed GT2 sleeve), is drawn merged with the sleeve in the CAD and has no STEP or drawing
+  here yet. See [`../PARTS.md`](../PARTS.md#4--outer-ring--gt2-sleeve-fixed-side).
+- **Bearing fits:** JLCCNC cannot hold a defined precision fit reliably. On the first build the inner
+  ring's Ø50 seat was fine as delivered, but the outer ring's Ø61 pocket was too tight and had to be
+  sanded for a snug fit of the RAU5005. THK lists the fits in catalog 382E ("Fit"), which was not checked.
 - Wall at the thread relief is 1.1 mm (Ø47.2 relief vs Ø45 bore) — fine for 6061, but don't let the
   quote engineer thin it further.
 
