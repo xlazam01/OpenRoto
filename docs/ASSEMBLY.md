@@ -23,12 +23,13 @@ the camera side react through the belt and the sleeve: that is the weak path.
 ## Before you start: checks on the parts
 
 1. **Clean** all parts and blow the chips and blasting media out of the tapped holes in the outer ring 4a.
-2. **Screw length vs tapped depth.** The holes are drilled 4.8 deep; a tap leaves the last 1–1.5 mm
-   without full thread, and an M2.5×8 needs thread down to 0.3 mm above the bottom of the drilled hole.
-   Turn one screw 6 through the clamp ring 3 into each hole, the clamp ring held on the bare outer ring
-   with a 0.2 mm feeler under it (the gap the bearing fills later): if a screw stops before its head sits
-   in the countersink, use **M2.5×6** (still ~3.5 mm, about 8 turns, of engagement). The CAD and the
-   drawing ask for M2.5×8 / 4.5 mm thread; that is being corrected.
+2. **Tapped holes.** The six M2.5 holes in the outer ring 4a are tapped **through** (drawing rev B), so
+   an M2.5×8 has full thread over its ~4.5 mm in the ring. On a ring made to the first
+   drawing (rev A, holes drilled 4.8 blind), drill Ø2.1 through the remaining 1 mm floor and run the
+   M2.5 tap through, or use **M2.5×6**.
+   Check: turn one screw 6 through the clamp ring 3 into each hole, the clamp ring held on the bare outer
+   ring with a 0.2 mm feeler under it (the gap the bearing fills later): every screw must run in by hand
+   until its head sits in the countersink.
 3. **Bearing fits** (JLCCNC does not hold a defined precision fit):
    - Bearing 5 on the inner ring 1: the RAU5005 should slide onto the Ø50 seat by hand, without play.
      On the first build this fit was fine as delivered.
@@ -36,16 +37,15 @@ the camera side react through the belt and the sleeve: that is the weak path.
      even thumb pressure. On the first build the pocket was too tight: sand the pocket wall evenly (paper
      on a round former, turning the ring, re-trying often) until it fits. Stop as soon as it goes in —
      too loose lets the bearing shift. Clean off all dust.
-4. **Sleeve height.** Measure the printed sleeve 4b: it must be **6.5 mm or less** (6.3–6.4 is best).
-   The clamp ring presses on the bearing's outer race and, at the same nominal height, its plate also
-   meets the top of the sleeve: a sleeve that is too tall takes the clamping force and the bearing stays
-   loose. Sand the top face flat if it is over.
+4. **Sleeve height.** Measure the printed sleeve 4b: it is drawn **6.3 mm** high and must be **6.4 mm or
+   less**. The clamp ring presses on the bearing's outer race; its plate stays 0.2 mm above the top of
+   the sleeve. A sleeve that is too tall takes the clamping force and the bearing stays loose: sand the
+   top face flat if it is over. (A sleeve printed from the first 6.5 mm file must be sanded to 6.3.)
 
-   ![Half section at the clamp ring: contact A on the bearing, contact B on the sleeve](section_clamp_contact.png)
+   ![Half section at the clamp ring: contact A on the bearing, gap B over the sleeve](section_clamp_contact.png)
 
-   *Half section through a clamp screw ([`make_section.py`](make_section.py)): the clamp ring should
-   rest on the bearing's outer race (A, green); at nominal size its plate also meets the sleeve top
-   (B, red). The CAD will get a 6.3 mm sleeve.*
+   *Half section through a clamp screw ([`make_section.py`](make_section.py)): the clamp ring rests on
+   the bearing's outer race (A, green); its plate stays 0.2 mm above the sleeve top (B).*
 5. **Flattener (or other telescope-side part) thread length.** Its male M48 may go in **no more than
    2.7 mm** past the clamp ring's top face: below that runs the rotating inner ring's flange. Measure the
    male thread from its shoulder to its end; if it is longer, fit an M48 spacer ring (or a shorter

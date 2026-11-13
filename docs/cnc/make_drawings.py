@@ -61,7 +61,8 @@ def vdim(ax, x, z0, z1, text, ext_from):
             rotation=90, zorder=5)
 
 
-def sheet(title, part, step, notes, pieces, xlim, ylim, detail, plan=None, overview_ylim=None):
+def sheet(title, part, step, notes, pieces, xlim, ylim, detail, plan=None, overview_ylim=None,
+          rev=REV, date=DATE):
     fig = plt.figure(figsize=(11.69, 8.27))  # A4 landscape
     fig.patch.set_facecolor("white")
     fr = fig.add_axes([0, 0, 1, 1]); fr.axis("off"); fr.set_xlim(0, 297); fr.set_ylim(0, 210)
@@ -71,7 +72,7 @@ def sheet(title, part, step, notes, pieces, xlim, ylim, detail, plan=None, overv
     # title block
     tb = [("Project", "OpenRoto (rotator of Triton)"), ("Part", title), ("3D model", step),
           ("Material", MATERIAL), ("Finish", "bead blast + black anodise, matte"), ("Qty", "1"),
-          ("Units", "mm, see dimensions (not to scale)"), ("Rev / date", f"{REV} / {DATE}")]
+          ("Units", "mm, see dimensions (not to scale)"), ("Rev / date", f"{rev} / {date}")]
     x0, y0, w, h = 187, 10, 100, 44
     fr.add_patch(plt.Rectangle((x0, y0), w, h, fill=False, lw=0.8, color=INK))
     for i, (k, v) in enumerate(tb):
@@ -207,11 +208,12 @@ sheet("Clamp ring", "clamp_ring", "cad/openroto_clamp_ring.step",
       [CLAMP_IN, CLAMP_OUT], (13, 49), (-2.2, 6.0), detail_clamp, plan=plan_clamp, overview_ylim=(-4, 7.5))
 
 # ---------------------------------------------------------------- outer ring (z0 = flange bottom face)
-# section through two of the six tapped holes (0 and 180 deg); drill Ø2.1 x 4.8 + 118° point, csk Ø2.8
-OUTER = [(28.7, 0), (38.743, 0), (38.943, 0.2), (38.943, 0.8), (38.743, 1.0), (35, 1.0), (35, 5.6),
-         (34.8, 5.8), (33.9, 5.8), (33.55, 5.45), (33.55, 1.0), (32.5, 0.369), (31.45, 1.0),
-         (31.45, 5.45), (31.1, 5.8), (30.7, 5.8), (30.5, 5.6), (30.5, 1.0), (28.7, 1.0), (28.5, 0.8),
-         (28.5, 0.2)]
+# section through two of the six tapped holes (0 and 180 deg); drill Ø2.1 through (5.8), csk Ø2.8
+# rev B (2026-11-13): holes drilled and tapped through instead of 4.8 blind, so an M2.5x8 has full thread
+OUTER_IN = [(28.7, 0), (31.45, 0), (31.45, 5.45), (31.1, 5.8), (30.7, 5.8), (30.5, 5.6), (30.5, 1.0),
+            (28.7, 1.0), (28.5, 0.8), (28.5, 0.2)]
+OUTER_OUT = [(33.55, 0), (38.743, 0), (38.943, 0.2), (38.943, 0.8), (38.743, 1.0), (35, 1.0), (35, 5.6),
+             (34.8, 5.8), (33.9, 5.8), (33.55, 5.45)]
 
 
 def detail_outer(ax):
@@ -219,7 +221,7 @@ def detail_outer(ax):
     leader(ax, (38.943, 0.5), "Ø77.9  belt flange", (40.6, -1.2))
     leader(ax, (35.0, 3.3), "Ø70 0/-0.05  rim, Ra 1.6: the printed GT2\nsleeve (bore Ø69.8) is pressed on - note 9",
            (40.6, 3.0))
-    leader(ax, (33.55, 3.2), "6x M2.5-6H, thread 4.5 deep min,\ndrill Ø2.1 x 4.8, csk 90° to Ø2.8,\nPCD Ø65 (top view) - note 10",
+    leader(ax, (33.55, 3.2), "6x M2.5-6H THROUGH, thread full length,\ndrill Ø2.1 through, csk 90° to Ø2.8,\nPCD Ø65 (top view) - note 10",
            (40.6, 6.4))
     leader(ax, (34.3, 5.8), "top face: flat 0.02, Ra 1.6", (40.6, 8.6))
     leader(ax, (30.5, 3.3), "Ø61 H7  bearing pocket (THK RAU5005\nouter ring), Ra 0.8 - note 7", (26.8, 7.4),
@@ -253,6 +255,7 @@ sheet("Outer ring", "outer_ring", "cad/openroto_outer_ring.step",
       ["Ø61 H7 (61.000-61.030): housing for the RAU5005 outer ring; hold it after anodising (THK 382E not checked).",
        "First JLCCNC build: the Ø61 pocket came out tight and was sanded until the bearing went in snugly.",
        "Rim Ø70 carries the printed PETG GT2 sleeve with a 0.2 mm press fit: round, no burrs.",
-       "M2.5-6H threads usable after anodising; DIN 7991 M2.5x8 screws reach 4.5 below the top face.",
+       "M2.5-6H tapped THROUGH, usable after anodising; M2.5x8 screws reach 4.5 below the top face; deburr exits.",
        "Pocket depth 4.8 < bearing width 5: the clamp ring presses the bearing's outer ring, not this ring."],
-      [OUTER], (6, 54), (-2.0, 9.4), detail_outer, plan=plan_outer, overview_ylim=(-4, 9.5))
+      [OUTER_IN, OUTER_OUT], (6, 54), (-2.0, 9.4), detail_outer, plan=plan_outer, overview_ylim=(-4, 9.5),
+      rev="B", date=datetime.date(2026, 11, 13).isoformat())
