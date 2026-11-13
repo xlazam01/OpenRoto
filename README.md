@@ -17,6 +17,7 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
 | [Assembly](docs/ASSEMBLY.md) | tools, steps, belt tension, final check |
 | [CNC order package](docs/cnc/) | STEP + PDF drawing per milled ring, JLCCNC settings |
 | [CAD notes](cad/README.md) | design files, parameters, checks, deviations from the original |
+| [Logo](cad/logo/) | badge and lockup SVGs for embossing, same style as Triton and OpenWheel |
 
 ## Specifications
 
@@ -116,7 +117,7 @@ The `.sc` files open in SolidCraft; everyone else uses the STEP exports.
 
 - Hardware design files (`cad/`, the drawings and the exploded view in `docs/`): CERN-OHL-S-2.0, see
   [LICENSE-HARDWARE](LICENSE-HARDWARE).
-- Scripts (`docs/cnc/make_drawings.py`, `docs/label_exploded.py`): GPL-3.0-or-later, see [LICENSE](LICENSE).
+- Scripts (`docs/cnc/make_drawings.py`, `docs/label_exploded.py`, `cad/logo/make_logo.py`): GPL-3.0-or-later, see [LICENSE](LICENSE).
 - Documentation text: CERN-OHL-S-2.0, as part of the hardware design.
 
 The original rotator design in `cad/original/` is the author's own and is published under the same
