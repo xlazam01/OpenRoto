@@ -46,7 +46,7 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
   thread sizes (M54, M68, …) with a bigger bearing.
 - **Fits.** The rings were milled at JLCCNC, which cannot guarantee a defined precision fit for the
   bearing. The inner ring's seat was fine as delivered; the outer ring's bearing pocket had to be sanded
-  for a snug fit (see [Assembly](docs/ASSEMBLY.md#before-you-start)).
+  for a snug fit (see [Assembly](docs/ASSEMBLY.md#before-you-start-checks-on-the-parts)).
 
 ## How it works
 
@@ -81,18 +81,21 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
 
 ## Assembly
 
-Short version — the full guide with tools, torque and checks is [`docs/ASSEMBLY.md`](docs/ASSEMBLY.md).
+Short version — the full guide with the part checks, tools, torque and the access rules is
+[`docs/ASSEMBLY.md`](docs/ASSEMBLY.md).
 
-1. Check the bearing fits; sand the outer ring's Ø61 pocket if the RAU5005 does not go in snugly.
-2. Press the printed GT2 sleeve over the outer ring's rim.
-3. Slide the RAU5005 onto the inner ring's Ø50 seat from the thread side up to the Ø52 flange, then
-   the spacer ring behind it (lip towards the bearing).
-4. Put the inner ring with the bearing into the outer ring (bearing outer ring in the Ø61 pocket).
-5. Put the clamp ring on top and tighten the six DIN 7991 M2.5×8 screws in a star pattern: snug
-   (0.3–0.5 N·m), not tight. Check that it turns smoothly.
-6. Screw the flattener into the clamp ring and the OAG (or the next part) onto the inner ring.
-7. Fit the pulley on the motor, lay the belt over sleeve and pulley and tension it with the motor's
-   slots (2–3 mm deflection mid-span). Check: turns freely, no play, belt tracks.
+1. Check the parts: bearing fits (sand the outer ring's Ø61 pocket if needed), sleeve height ≤ 6.5 mm,
+   screw length (M2.5×6 if an ×8 bottoms in the tapped hole), flattener thread ≤ 2.7 mm into the clamp ring.
+2. Press the printed GT2 sleeve fully onto the outer ring's rim and flange.
+3. Bearing into the outer ring's pocket (press its outer race with the clamp ring), inner ring into the
+   bearing from the top, spacer ring onto the seat from below (raised lip towards the bearing).
+4. Clamp ring on, six DIN 7991 M2.5 screws in opposite pairs, snug (0.3–0.5 N·m). Check: a gap between
+   clamp plate and sleeve, and the inner ring turns smoothly.
+5. Screw the camera-side part (OAG) onto the inner ring **before** the flattener, holding the inner ring
+   by its bore.
+6. Screw the rotator onto the flattener holding the clamp ring — never turn the train by the camera.
+7. Pulley height by dry fit, belt on, tension with the motor plate's slots. Route the cables, then
+   check: no play, belt tracks, back to the mark after ±360°.
 
 ## Repository
 
@@ -119,7 +122,7 @@ The `.sc` files open in SolidCraft; everyone else uses the STEP exports.
 
 - Hardware design files (`cad/`, the drawings and the exploded view in `docs/`): CERN-OHL-S-2.0, see
   [LICENSE-HARDWARE](LICENSE-HARDWARE).
-- Scripts (`docs/cnc/make_drawings.py`, `docs/label_exploded.py`, `cad/logo/make_logo.py`): GPL-3.0-or-later, see [LICENSE](LICENSE).
+- Scripts (`docs/cnc/make_drawings.py`, `docs/label_exploded.py`, `docs/make_section.py`, `cad/logo/make_logo.py`): GPL-3.0-or-later, see [LICENSE](LICENSE).
 - Documentation text: CERN-OHL-S-2.0, as part of the hardware design.
 
 The original rotator design in `cad/original/` is the author's own and is published under the same
