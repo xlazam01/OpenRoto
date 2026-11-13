@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.png" alt="OpenRoto" width="100%"></p>
+
 # OpenRoto
 
 **A slim, belt-driven camera rotator for M48 imaging trains.** A THK RAU5005 crossed roller ring
