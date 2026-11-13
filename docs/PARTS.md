@@ -33,31 +33,33 @@ bearing's inner ring against the inner ring's flange.
 
 The telescope-side interface and the bearing's outer clamp. Ø78 × 3.55 with a female M48×0.75 thread
 for the flattener, a Ø57 recess over the inner ring's flange, a Ø70 × 1.5 spigot that centres it in the
-outer ring, and six Ø2.7 holes countersunk 90° on a Ø65 circle.
+GT2 sleeve above the outer ring's rim, and six Ø2.7 holes countersunk 90° on a Ø65 circle.
 
 - Material: aluminium 6061-T6, bead blasted and black matte anodised. ~22 g.
 - Make: CNC turning + drilling; order with [`cnc/`](cnc/). Bottom face flat 0.02.
 
 ## 4 — Outer ring + GT2 sleeve (fixed side)
 
-> **The CAD draws these as one printed body (`openroto_gt2_sleeve`); the real rotator has two parts.**
-> The release-1 rebuild merged the original's two bodies by mistake. Splitting the model is open work;
-> until then the STEP/3MF of `openroto_gt2_sleeve` is **not** a print or order file.
+**4a — Outer ring (milled).** The bearing housing: a Ø61 pocket 4.8 deep for the bearing's outer ring
+(its top face stays 0.2 below the bearing, so the clamp ring presses on the bearing), a Ø57 lip under
+it, six M2.5 tapped holes on a Ø65 circle for the clamp-ring screws, the Ø70 rim the GT2 sleeve is
+pressed onto, and the Ø77.9 × 1 belt flange the sleeve sits on.
 
-**4a — Outer ring (milled).** The bearing housing: a Ø61 pocket for the bearing's outer ring, six
-tapped M2.5 holes on a Ø65 circle for the clamp-ring screws, and the rim the GT2 sleeve sits on.
-
-- Material: aluminium 6061-T6, bead blasted and black matte anodised.
-- Make: CNC (JLCCNC, like the other rings).
+- Material: aluminium 6061-T6, bead blasted and black matte anodised. ~18 g.
+- Make: CNC turning + drilling and tapping; order with [`cnc/`](cnc/) (STEP + PDF drawing, the drawing
+  carries the threads and the pocket fit).
 - **Bearing fit:** JLCCNC cannot guarantee a defined precision fit. On the first build the Ø61 pocket
   came out too tight and was sanded until the RAU5005 sat in it snugly; the inner ring's Ø50 seat was
   fine as delivered. Expect to fit the pocket by hand, or order it from a shop that holds the tolerance.
 
-**4b — GT2 sleeve (printed).** A thin printed ring carrying the 120 GT2 teeth and the Ø77.9 belt
-flange. It is pressed over the outer ring's rim and held by friction.
+**4b — GT2 sleeve (printed).** A thin printed ring carrying the 120 GT2 teeth (tip Ø75.9, 6.5 high).
+Its Ø69.8 bore is pressed over the outer ring's Ø70 rim and held by friction; the clamp ring's spigot
+goes into its top.
 
-- Material: PETG (stiff, little creep).
-- Make: print flange down, no supports, 0.2 mm layers, at least 3 perimeters so the teeth are solid.
+- Material: PETG (stiff, little creep). ~5 g.
+- Make: [`../cad/openroto_gt2_sleeve.3mf`](../cad/openroto_gt2_sleeve.3mf), either face down, no supports,
+  0.2 mm layers, at least 3 perimeters so the teeth are solid. Try the fit on the rim before assembly:
+  if it is loose or cracks, change `sl_id` in the design (or the slicer's hole compensation).
 
 ## 5 — Crossed roller ring THK RAU5005 (bought)
 

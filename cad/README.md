@@ -14,24 +14,27 @@ here from Triton). The Solid Edge `Rotator` folder is only a placeholder and was
 | `openroto_inner_ring` | milled Al, black matte anodised | rotating side: Ø45 bore with 1.5 × 45° lead-in under a Ø48 counterbore, Ø50 bearing seat, Ø52 × 0.8 flange over the bearing, male M48×0.75 (Ø47.908, 2.7 long) with a Ø47.2 undercut |
 | `openroto_spacer_ring` | milled Al, black matte anodised | Ø50.05 / Ø55 × 1.5 under the bearing inner ring, Ø52 × 0.5 lip; turns with the inner ring |
 | `openroto_clamp_ring` | milled Al, black matte anodised | fixed side: Ø78 × 3.55, female M48×0.75 (minor Ø47.284), Ø57 recess over the inner-ring flange, Ø70 × 1.5 spigot into the sleeve, 6 × Ø2.7 countersunk 90° to Ø5.3 on Ø65 |
-| `openroto_gt2_sleeve` | **two parts in reality** (see below) | bearing housing Ø61, 120T GT2 ring (tip Ø75.886 = 120·2/π − 2·0.254), Ø77.886 × 1 belt flange, 6 × Ø2.0755 pilot holes 4.8 deep on Ø65 for the M2.5 screws |
+| `openroto_outer_ring` | milled Al, black matte anodised | fixed side: Ø61 bearing pocket 4.8 deep (top face 0.2 below the bearing, so the clamp presses the bearing), Ø57 lip under it, Ø70 × 4.8 rim for the sleeve, Ø77.886 × 1 belt flange, 6 × M2.5 tapped on Ø65 (drill Ø2.1 × 4.8 + 118° point, 90° countersink to Ø2.8; thread cosmetic) |
+| `openroto_gt2_sleeve` | printed PETG | thin GT2 ring: 120 teeth (tip Ø75.886 = 120·2/π − 2·0.254), 6.5 high, bore Ø69.8 (`sl_id`, 0.2 mm press fit on the Ø70 rim), 0.2 × 45° bore chamfers; sits on the outer ring's flange |
 | `openroto_assembly` | — | all parts, 6 screws, pulley at (0, 97.900) and the belt |
 
-**Outer ring + GT2 sleeve:** `openroto_gt2_sleeve` merges what the real rotator has as two parts:
-a milled aluminium outer ring (Ø61 bearing pocket, six tapped M2.5 holes, rim) and a thin printed GT2
-sleeve pressed over the rim. The rebuild joined the original's two bodies by mistake (the original
-STEP has them as `outter ring` and `GT2 Pulley`). Its STEP and 3MF are reference geometry until the
-design is split; the six "pilot holes" stand for the tapped M2.5 holes.
+**Outer ring + GT2 sleeve:** as in the original STEP (`outter ring` → `Component6` with the bodies
+`GT2 Pulley (1)` = the toothed ring and `GT2 Pulley (1) (1)` = the flanged ring with pocket and holes),
+the milled outer ring carries the belt flange and the printed sleeve is a plain toothed tube. The original
+draws both at Ø70 (line to line); the sleeve bore is Ø69.8 here for the press fit (user, 2026-11-13).
+The clamp ring's Ø70 spigot also goes into the top 1.5 mm of the sleeve bore, so it presses in the same
+way. Interference check of the assembly: sleeve/outer ring 98.8 mm³, sleeve/clamp 29.6 mm³ (both the
+0.1 mm radial press fit), screw/outer ring 6.0 mm³ (the Ø2.5 screw in the Ø2.1 tap drill); nothing else.
 
 Threads are plain cylinders at the thread diameters of the original (cosmetic), as in the STEP.
 
 Deviations from the original STEP, all small:
 - clamp holes: a plain 90° countersink to Ø5.3 at the face instead of Ø5.1 + 0.1 mm cylinder (same cone);
-- sleeve: one body instead of the original's outer ring + GT2 pulley (wrong, see above); the 0.2 mm V-notch between the core
-  top and the tooth ring is filled; the pilot holes have a flat bottom instead of a 118° drill point
-  (that cone tip gave an open mesh edge) and a 0.2 × 90° countersink instead of a chamfer;
+- outer ring: tap drill Ø2.1 (the M2.5 drill) instead of Ø2.0755, and a 90° countersink to Ø2.8 instead
+  of a 0.2 chamfer at the hole mouth; 6525.4 mm³ against 6529.8;
+- sleeve: bore Ø69.8 instead of Ø70 (press fit, see above);
 - GT2 grooves: standard approximation (R0.555 tooth arc, 0.75 deep, R0.15 lip), not a copy of the
-  original tooth form. The sleeve comes out 0.24 % heavier than the original's sleeve bodies.
+  original tooth form. The sleeve comes out 3965.3 mm³ against 3810.3 (the 0.1 mm thicker wall adds 142, the grooves the rest).
 
 ## Bought parts (linked designs)
 
@@ -51,23 +54,24 @@ The pulley sits on +Y in the assembly; its real direction comes from the OpenWhe
 
 Every size is a parameter of its design (the points of the revolved profile sketches are expressions,
 dof 0). Main ones: inner ring `bore_d`, `bear_bore`, `bear_w`, `thr_d`, `thr_len`; clamp `cl_od`,
-`cl_t`, `thr_d`, `hole_pcd`, `hole_d`, `cs_d`, `n_holes`; sleeve `bear_od`, `sl_od`, `fl_od`,
-`belt_h`, `pilot_d`, `hole_pcd`, `teeth`, `groove_r`, `groove_depth`, `lip_r`.
+`cl_t`, `thr_d`, `hole_pcd`, `hole_d`, `cs_d`, `n_holes`; outer ring `bear_od`, `rim_od`, `rim_h`,
+`fl_id`, `fl_od`, `fl_t`, `hole_pcd`, `cs_d`, `n_holes`; sleeve `sl_id`, `belt_h`, `teeth`, `groove_r`,
+`groove_depth`, `lip_r`.
 
 Limits:
 - The sleeve's 240 groove-lip fillets (`GrooveLipFillets`, R0.15) are picked at fixed points for
-  120 teeth: changing `teeth` needs that feature redone. A full sleeve rebuild took about 40 min
-  in SolidCraft 0.29 and 2.4 min after the 2026-11-08 update (the fillets ~77 s, the pilot holes
-  ~110 s). Opening the file is instant (saved model).
+  120 teeth: changing `teeth` needs that feature redone. A full sleeve rebuild takes about 80 s
+  (the fillets ~75 s). Opening the file is instant (saved model).
 
-## Checks (2026-11-08, re-checked 2026-11-09)
+## Checks (2026-11-08, re-checked 2026-11-09; outer ring and sleeve 2026-11-13)
 
 | Design | Volume mm³ (original STEP) | Feature warnings | Mesh (`meshcheck`) | Print (`printcheck --up=+z`) |
 |---|---|---|---|---|
 | inner ring | 2977.7 (2977.4) | none | 0 open edges | — (milled) |
 | spacer ring | 482.4 (482.4) | none | 0 open edges | — (milled) |
 | clamp ring | 8220.3 (8221.0) | none | 0 open edges | — (milled) |
-| GT2 sleeve | 10365.2 (10340.4) | none | 0 open edges | no supports, no thin walls, bed contact 2127 mm² (flange down) |
+| outer ring | 6525.4 (6529.8) | none | 0 open edges | — (milled) |
+| GT2 sleeve | 3965.3 (3810.3) | none | 0 open edges | no supports, no thin walls, bed contact 570 mm² |
 | bearing | 4780.9 (4780.5) | none | — | — |
 
 All designs open from their saved model (`solidcraft-cli bench-open`: `adopted: true, recomputed: 0`).
@@ -75,15 +79,19 @@ A SolidCraft update (2026-11-08 evening) stopped loading the saved models of old
 design was re-saved on 2026-11-09 (`bench-open <file> --save <out>` recomputes and saves, but saves no
 model when a feature fails, so check its output). The update also lost two chamfer picks, both
 reselected with the volume unchanged and 0 open edges: the clamp's `HoleChamfers` (at +Y of each hole,
-8220.3) and the sleeve's `ToothRingInnerChamfer` (at 45° on the Ø70 top edge, 10365.2; print check
-unchanged). The assembly links all designs with no feature warnings.
+8220.3) and the then-merged sleeve's `ToothRingInnerChamfer`. The assembly links all designs with no
+feature warnings. Every STEP export passes `stepcheck.py` (OpenCASCADE: valid, 0 faces badly meshed).
+The sleeve follows `sl_id` (69.9: 3893.9 mm³, no errors).
 The clamp follows `hole_pcd` and `cl_od` without errors (`check_parameters`).
 
 Kernel notes from the build: a revolved hole cutter and a 120-cylinder groove cut both logged
 "Boolean retry", so the sleeve's tooth ring is one planar sketch extrude (tip circle, inner circle,
-120 patterned groove circles half a pitch off the revolve seam) joined to a revolved flange/core that
-overlaps it, and the clamp's holes are `solid.hole` countersinks.
+120 patterned groove circles half a pitch off the revolve seam), and the clamp's holes are `solid.hole`
+countersinks. The outer ring's tapped holes are `solid.hole` with `thread: M2.5` (cosmetic) and a 118°
+point; that cone tip meshes closed.
 
 ## Print settings (GT2 sleeve)
 
-For the thin printed sleeve (once split from the outer ring): flange on the bed, no supports. PETG, 0.2 mm layers, at least 3 perimeters so the teeth are solid.
+Either face on the bed (the part is symmetric), no supports. PETG, 0.2 mm layers, at least 3 perimeters
+so the teeth are solid. Check the bore on the first print: it must press onto the Ø70 rim by hand or with
+light taps; tune `sl_id` (or the slicer's hole compensation) if it is loose or cracks.
