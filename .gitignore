@@ -27,5 +27,8 @@ obj/
 # SolidCraft open-file locks
 .~*.lock
 
+# Rendered reference output (view DXFs, animation frames)
+cad/_ref/
+
 # Python
 __pycache__/
