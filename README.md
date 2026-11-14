@@ -8,6 +8,9 @@ closed 340 mm belt, so 10:1. 10.05 mm of optical length, Ø45 clear aperture.
 
 ![OpenRoto assembly](cad/openroto_assembly.png)
 
+<p align="center"><img src="docs/openroto_explode.gif" width="320" alt="OpenRoto coming apart along the optical axis"><br>
+<sub>Seven parts, rendered from the assembly — screws, clamp ring, inner ring, bearing, spacer, GT2 sleeve, outer ring</sub></p>
+
 OpenRoto is the rotator of Triton, the author's Esprit 100ED imaging train, and belongs to the
 [OpenWheel](https://github.com/xlazam01/OpenWheel) family. It has no electronics of its own: in
 Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoard) channel **R**.
@@ -104,7 +107,7 @@ Short version — the full guide with the part checks, tools, torque and the acc
 | [`cad/`](cad/) | SolidCraft designs (editable source), STEP and 3MF exports, the original STEP in `cad/original/` |
 | [`docs/`](docs/) | parts, BOM, assembly guide, exploded view and the CNC order package |
 | `hw/`, `fw/`, `sw/` | empty: no electronics; the drive runs on AstroUniBoard |
-| [`release/`](release/) | release packages (none yet) |
+| [`release/`](release/) | release packages — current: [`1.0.0`](release/1.0.0/) ([download](https://github.com/xlazam01/OpenRoto/releases/tag/v1.0.0)) |
 
 The `.sc` files open in SolidCraft; everyone else uses the STEP exports.
 
