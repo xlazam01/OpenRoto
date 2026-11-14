@@ -4,7 +4,7 @@
 
 **A slim, belt-driven camera rotator for M48 imaging trains.** A THK RAU5005 crossed roller ring
 carries the camera side; a 120-tooth GT2 ring on the telescope side is driven by a 12T pulley and a
-closed 340 mm belt, so 10:1. About 10.4 mm of optical length, Ø45 clear aperture.
+closed 340 mm belt, so 10:1. 10.05 mm of optical length, Ø45 clear aperture.
 
 ![OpenRoto assembly](cad/openroto_assembly.png)
 
@@ -26,7 +26,7 @@ Triton the motor runs on [AstroUniBoard](https://github.com/xlazam01/AstroUniBoa
 | | |
 |---|---|
 | Interfaces | telescope side: female M48×0.75 (flattener); camera side: male M48×0.75 (OAG / next part) |
-| Optical length | ~10.4 mm; overall height 13.05 mm |
+| Optical length | 10.05 mm; overall height 13.05 mm |
 | Clear aperture | Ø45 mm |
 | Outside diameter | Ø78 mm (clamp ring); belt flange Ø77.9 mm |
 | Bearing | THK RAU5005 crossed roller ring, 50 × 61 × 5 mm |
