@@ -1,0 +1,11 @@
+Item,Qty,Part,Specification,Source / search term,Notes
+1,1,Inner ring,"6061-T6, bead blasted + black matte anodised; male M48x0.75-6g; dia 50 h6 bearing seat",CNC service (e.g. JLCCNC): cad/cnc/openroto_inner_ring.step + .pdf,"rotating side, camera-side thread"
+2,1,Spacer ring,"6061-T6, bead blasted + black matte anodised; dia 50.05 / dia 55 x 1.5",CNC service: cad/cnc/openroto_spacer_ring.step + .pdf,under the bearing inner ring
+3,1,Clamp ring,"6061-T6, bead blasted + black matte anodised; female M48x0.75-6H; dia 78 x 3.55",CNC service: cad/cnc/openroto_clamp_ring.step + .pdf,"fixed side, telescope-side thread"
+4a,1,Outer ring,"6061-T6, bead blasted + black matte anodised; dia 61 bearing pocket, 6 x M2.5-6H tapped through on dia 65, dia 70 rim for the sleeve, dia 77.9 belt flange",CNC service: cad/cnc/openroto_outer_ring.step + .pdf,the dia 61 pocket needed sanding for a snug bearing fit on the first build
+4b,1,"GT2 sleeve, 120T","thin printed ring, 120 GT2 teeth, 6.3 high, bore dia 69.8; PETG, 0.2 mm layers, >= 3 perimeters",print cad/printed/openroto_gt2_sleeve.3mf,"no supports; pressed over the outer ring's dia 70 rim (0.2 mm press fit)"
+5,1,Crossed roller ring,"THK RAU5005, 50 x 61 x 5 mm",THK distributors; search "THK RAU5005",the only precision bought part
+6,6,Countersunk screw,"DIN 7991 (ISO 10642) M2.5x8, hex socket 1.5 mm, A2 stainless","fastener shops; search ""DIN 7991 M2.5x8 A2""",into the outer ring's through-tapped holes (~4.5 mm engagement)
+7,1,"GT2 pulley, 12T","5 mm bore, for 6 mm belt, with grub screws","3D-printer parts shops; search ""GT2 12T pulley 5mm bore 6mm""",model is a typical envelope - measure yours before relying on the CAD
+8,1,GT2 closed belt,"340 mm (170 teeth), 6 mm wide","3D-printer parts shops; search ""GT2 closed loop belt 340mm 6mm""",not 360 mm: centre distance 97.90 mm
+9,1,Stepper motor,"17HS08-1004S, NEMA 17 pancake, 1.0 A, 5 mm shaft",StepperOnline; search "17HS08-1004S",16 microsteps -> 88.889 steps/deg at 10:1
